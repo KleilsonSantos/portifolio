@@ -26,11 +26,13 @@ Portfólio do desenvolvedor
 :small_blue_diamond: [Extensões](#extensões-para-instalar-no-visual-studio-code)
  
 :small_blue_diamond: [Tarefas](#tarefas)
- 
+
+:small_blue_diamond: [Icones](#ícones)
+
 ...
- 
+
 ## Descrição do projeto
- 
+
 <p align="justify">
  Site pessoal do desenvolvedor, com a finalidade de mostrar seu perfil profissional por meio de seus projetos desenvolvidos, habilidades e seu contato.
 </p>
@@ -106,3 +108,8 @@ git clone git@github.com:KleilsonSantos/portifolio.git
 O controle das tarefas desse projeto será realizado no GitHub
  
 ...
+## Ícones
+- :package: New Functionality
+- :arrow_up: Updating
+- :beetle: Bug correction
+- :checkered_flag: Release
