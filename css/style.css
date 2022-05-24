@@ -1,2 +1,162 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Mulish:ital,wght@0,200;0,300;0,500;1,200;1,300;1,400&display=swap');
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root {
+    --font-primary: 'Baloo Da 2', serif;
+    --font-secondary: "Josefin Slab", serif;
+    --font-action: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.hamburguer {
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.line {
+    background-color: white;
+    width: 100%;
+    height: 0.1rem;
+    display: block;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+}
+
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, .8);
+    ;
+}
+
+.img-wrapper {
+    opacity: 0.4;
+    width: 100%;
+    height: 100vh;
+    animation: zoom 10s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.6);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.banner {
+    top: 30vh;
+    left: 8em;
+    position: absolute;
+}
+
+.banner h1 {
+    color: #ffffff;
+    line-height: 1.2em;
+    font-size: 5rem;
+    font-family: var(--font-primary);
+    font-weight: 300;
+    text-shadow: .1em .1rem 1px rgba(0, 0, 0, .8);
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
+}
+
+@keyframes moveBanner {
+    0% {
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+.banner p {
+    font-family: var(--font-secondary);
+    color: white;
+    text-shadow: .1rem .1rem 1px rgba(0, 0, 0, .8);
+    font-size: 2.4rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+}
+
+.banner button {
+    font-family: var(--font-action);
+    color: white;
+    text-transform: uppercase;
+    font-size: .8rem;
+    border-radius: 5px;
+    border-style: none;
+    letter-spacing: .2rem;
+    padding: 1rem 3.5rem;
+    background-color: rgb(34, 109, 163);
+    text-shadow: .1em .1em 1px rgba(0, 0, 0, 1);
+    background: -webkit-linear-gradient(to rgb(140, 186, 219), rgb(34, 109, 163));
+    background: linear-gradient(rgb(140, 186, 219), rgb(34, 109, 163));
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;
+}
+
+.banner button:hover {
+    cursor: pointer;
+}
+
+.sidebar {
+    font-family: var(--font-action);
+    background: rgb(255, 255, 255);
+    width: 20rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    height: 100vh;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+}
+
+.menu-link {
+    color: rgb(34, 109, 163);
+    font-family: var(--font-action);
+    font-size: 2rem;
+    animation: color 1s;
+}
+
+.menu-link:hover {
+    color: rgb(26, 85, 126);
+}
+
+.social-media {
+    background-color: coral;
+    position: absolute;
+    right: 2rem;
+}
